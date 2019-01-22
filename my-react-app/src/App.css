@@ -32,3 +32,9 @@
   display: flex;
   justify-self: center;
 }
+
+.item {
+  width: 300px;
+  border: 1px solid#dedede;
+  margin: 30px 10px 10px 10px;
+}

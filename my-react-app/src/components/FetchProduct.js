@@ -25,7 +25,7 @@ async componentDidMount() {
     return (
        <div className="layout">
         {this.state.items.map(item => (
-        <div key={item.id}>
+        <div key={item.id} className="item">
          <img src={item.image_link} />
           <div>{item.brand}</div>
           <div>{item.name}</div>
