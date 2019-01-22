@@ -12,8 +12,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="title-name">Find My Cosmetics</h1>
           <SearchBar/>
-            <FetchProduct/>
+          
         </header>
+          <FetchProduct/>
       </div>
     );
   }

@@ -1,0 +1,17 @@
+
+.title-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  width: 300px;
+  border: 1px solid#dedede;
+  margin: 30px 10px 10px 10px;
+  background: #fff;
+}

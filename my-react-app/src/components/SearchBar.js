@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './SearchBar.css'
 
 class SearchBar extends React.Component {
     constructor(){
@@ -14,7 +15,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="search">
-      <input onChange={event => this.onInputChange(event.target.value)}/> 
+      <input className="search-bar" type="text" placeholder="Search" onChange={event => this.onInputChange(event.target.value)}/> 
       </div>
     );
   }

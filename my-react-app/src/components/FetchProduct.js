@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './FetchProduct.css';
 
 class FetchProduct extends Component {
 
