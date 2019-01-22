@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './makeup.svg';
 import './App.css';
 import FetchProduct from './components/FetchProduct';
+import SearchBar from './components/SearchBar';
 
 class App extends Component {
   render() {
@@ -10,7 +11,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="title-name">Find My Cosmetics</h1>
-          <button className="click-btn">Click</button>
+          <SearchBar/>
             <FetchProduct/>
         </header>
       </div>

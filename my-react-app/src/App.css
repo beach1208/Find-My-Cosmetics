@@ -28,11 +28,7 @@
   font-weight: lighter;
 }
 
-.click-btn {
-  font-size: 18px;
-  padding: 20px 40px;
-  width: 150px;
-  color: #fff;
-  background: #b9a5e4;
-  border-radius: 20px;
+.layout {
+  display: flex;
+  justify-self: center;
 }
