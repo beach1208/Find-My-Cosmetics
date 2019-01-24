@@ -26,35 +26,30 @@ onTextChange = e =>{
       .catch(err => console.log(err));
     }
   });
+
 };
 
-// async componentDidMount() {
-//  const url = "http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=lipstick";
-//     const response = await fetch(url);
-//     const data = await response.json();
-//    this.setState({ items: data, loading: false });
-//   }
+
 
   render() {
-    // if(this.state.loading) {
-    //   return <div>loading...</div>
-    // }
-
-    // if(!this.state.items) {
-    //   return <div>didn't get any product</div>
-    // }
-
     
     return (
        <div className="search">
       <input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.onTextChange}/> 
-      
         <div className="layout">
         {this.state.items.map(item => (
         <div key={item.id} className="item">
-         <img src={item.image_link} />
-          <div>{item.brand}</div>
-          <div>{item.name}</div>
+         <img src={item.image_link} className="image-link" alt="No Image Found"/>
+         <div className="item-list">
+         <div className="item-name list">{item.name}</div>
+         <div className="brand-name list">by {item.brand}</div>
+         <div className="tag-name list">{item.tag_list}</div>
+         <a href={item.product_link} className="link-btn list" target="_blank">SHOP</a>
+         </div>
+       
+
+         
+          
          
           </div>
         ))}
