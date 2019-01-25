@@ -54,7 +54,11 @@ onTextChange = e =>{
          <div className="item-list">
          <div className="item-name list">{item.name}</div>
          <div className="brand-name list">by {item.brand}</div>
-         <div className="tag-name list">{item.tag_list}</div>
+
+         {item.tag_list.map(tag => (
+           <div className="tag-name list">{tag}</div>
+         ))}
+         
          </div>
 
          <div className="shop-btn">
