@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './makeup.svg';
+import logo from './img/makeup.svg'
 import './App.css';
 import FetchProduct from './components/FetchProduct';
 

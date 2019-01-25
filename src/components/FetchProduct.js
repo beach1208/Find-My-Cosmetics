@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './FetchProduct.css';
 import axios from "axios";
+import noimg from "../img/noimg.svg";
+import ReactImageFallback from "react-image-fallback";
+
 
 
 class FetchProduct extends Component {
@@ -11,6 +14,8 @@ state = {
   apiUrl: "http://makeup-api.herokuapp.com/api/v1/products.json",
   items: []
 };
+
+
 
 onTextChange = e =>{
   const val = e.target.value;
@@ -30,7 +35,6 @@ onTextChange = e =>{
 };
 
 
-
   render() {
     
     return (
@@ -39,18 +43,24 @@ onTextChange = e =>{
         <div className="layout">
         {this.state.items.map(item => (
         <div key={item.id} className="item">
-         <img src={item.image_link} className="image-link" alt="No Image Found"/>
+
+        <ReactImageFallback
+					src={item.image_link}
+					fallbackImage={noimg}
+					initialImage="loader.gif"
+					alt="Image should be here"
+					className="image-link" />
+      
          <div className="item-list">
          <div className="item-name list">{item.name}</div>
          <div className="brand-name list">by {item.brand}</div>
          <div className="tag-name list">{item.tag_list}</div>
+         </div>
+
+         <div className="shop-btn">
          <a href={item.product_link} className="link-btn list" target="_blank">SHOP</a>
          </div>
-       
 
-         
-          
-         
           </div>
         ))}
          
