@@ -55,6 +55,19 @@
   margin-bottom: 10px;
 }
 
+ul {
+  padding: 0;
+}
+.tag-name {
+  display: inline-block;
+  border: 1px solid #e06b6b;
+  padding: 10px;
+  color: #cc7781;
+  border-radius: 5px;
+  margin: 5px;
+
+}
+
 .shop-btn {
   padding: 20px;
 }
@@ -70,4 +83,5 @@
   text-decoration: none;
   background: #dc91a0;
 }
+
 
