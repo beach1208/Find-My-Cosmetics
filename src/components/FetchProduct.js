@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './FetchProduct.css';
 import axios from "axios";
 import ImageResult from "./ImageResult";
+import WordRecommend from "./WordRecommend";
 
 class FetchProduct extends Component {
 
@@ -53,8 +54,10 @@ handleOptionChange= e =>{
     <div className="search">
 
     <input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.handleInputChange}/>
-       
-    <div className="category">By Category</div>
+
+    <WordRecommend/>
+
+   
     <select className="select-bar" name="tagText" onChange={this.handleOptionChange}>
     <option value="Not Selected">Not Selected</option>
     <option value="canadian">Canadian</option>
@@ -79,9 +82,9 @@ handleOptionChange= e =>{
     <option value="purpicks">Purpicks</option>
     <option value="silicone free">Silicon Free</option>
     <option value="water free">Water Free</option>
-    
-
+  
     </select>  
+     <div className="category">By Category</div>
 
         <ImageResult items={this.state.items} />
  </div>
