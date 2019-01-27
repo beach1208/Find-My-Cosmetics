@@ -1,18 +1,26 @@
 .item {
   width: 300px;
+  margin: 30px 10px 10px 10px;
   border: 1px solid#dedede;
   border-radius: 5px;
-  margin: 30px 10px 10px 10px;
   background: #fff;
   overflow: hidden;
 }
-/* 
-.item-list {
+
+ul {
+width:100%;
+ margin:0;
+ padding:0;
  display: flex;
- justify-content: space-evenly;
- flex-direction: column;
- padding: 20px;
-} */
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+ul li {
+    width: 100%;
+    list-style: none;
+    margin-bottom: 20px;
+}
 
 .image-link {
   max-width: 100%;
@@ -28,30 +36,26 @@
 }
 
 .brand-name {
+  width: 100%;
   margin-bottom: 10px;
 }
 
-ul {
-  padding: 0;
-}
 .tag-name {
   display: inline-block;
+  width: 100px;
   border: 1px solid #cc7781;
   padding: 10px;
   color: #cc7781;
   border-radius: 5px;
   margin: 5px;
-
 }
 
-.shop-btn {
-  padding: 20px;
-}
 
-.link-btn {
+.link-btn a {
   width: 100px;
   padding: 10px;
   margin: 0 auto;
+  margin-top: 20px;
   border: 1px solid #cc7781;
   border-radius: 5px;
   display: block;

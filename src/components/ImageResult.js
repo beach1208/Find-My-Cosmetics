@@ -24,23 +24,17 @@ class ImageResult extends Component {
 					alt="Image should be here"
 					className="image-link" />
       
-         <div className="item-list">
-         <div className="item-name list">{item.name}</div>
-         <div className="brand-name list">by {item.brand}</div>
+         <li className="item-name">{item.name}</li>
+         <li className="brand-name">by {item.brand}</li>
 
         
         {/* tag_list is a list array and map trough each element here */}
          {item.tag_list.map(tag => (
-           <li key={tag} className="tag-name list">{tag}</li>
+           <li key={tag} className="tag-name">{tag}</li>
          ))}
-         <li><a href={item.product_link} className="link-btn list" target="_blank">SHOP</a></li>
-        
-         
-         </div>
+         <li className="link-btn"><a href={item.product_link} target="_blank">SHOP</a></li>
+    
           </ul>
-         {/* <div className="shop-btn">
-         <a href={item.product_link} className="link-btn list" target="_blank">SHOP</a>
-         </div> */}
 
           </div>
         ))}
