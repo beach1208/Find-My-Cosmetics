@@ -20,7 +20,6 @@ class ImageResult extends Component {
         <ReactImageFallback
 					src={item.image_link}
 					fallbackImage={noimg}
-					initialImage="loader.gif"
 					alt="Image should be here"
 					className="image-link" />
       
@@ -32,7 +31,7 @@ class ImageResult extends Component {
          {item.tag_list.map(tag => (
            <li key={tag} className="tag-name">{tag}</li>
          ))}
-         <li className="link-btn"><a href={item.product_link} target="_blank">SHOP</a></li>
+         <li className="link-btn"><a href={item.product_link} rel="noopener noreferrer" target="_blank">SHOP</a></li>
     
           </ul>
 

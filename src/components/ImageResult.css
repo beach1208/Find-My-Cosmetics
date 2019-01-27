@@ -29,7 +29,7 @@ ul li {
 }
 
 .item-name {
-  font-size: 20px;
+  font-size: 18px;
   color: #a05c7a;
   font-weight: bold;
   margin-bottom: 10px;
@@ -48,6 +48,7 @@ ul li {
   color: #cc7781;
   border-radius: 5px;
   margin: 5px;
+  font-size: 15px;
 }
 
 
