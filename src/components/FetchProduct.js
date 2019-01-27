@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import './FetchProduct.css';
 import axios from "axios";
-import noimg from "../img/noimg.svg";
-import ReactImageFallback from "react-image-fallback";
-import OptionChange from "./OptionChange";
-
-
+import ImageResult from "./ImageResult";
 
 class FetchProduct extends Component {
 
@@ -16,7 +12,6 @@ state = {
   apiUrl: "http://makeup-api.herokuapp.com/api/v1/products.json",
   items: []
 };
-
 
 
 handleInputChange= e =>{
@@ -35,69 +30,58 @@ handleInputChange= e =>{
   });
 };
 
-// handleOptionChange= e =>{
-//   const val = e.target.value;
-//   this.setState({[e.target.name]: val },() => {
-//     if(val === ""){
-//       this.setState({items: []});
-//     } else {
-//       axios
-//       .get(
-//         `${this.state.apiUrl}?product_type=${this.state.searchText}&product_tags=${this.state.tagText}`
-//       )
-//       .then(res => this.setState({items: res.data}))
-//       .catch(err => console.log(err));
-//     }
-//   });
-// };
-
+handleOptionChange= e =>{
+  const val = e.target.value;
+  this.setState({[e.target.name]: val },() => {
+    if(val === ""){
+      this.setState({items: []});
+    } else {
+      axios
+      .get(
+        `${this.state.apiUrl}?product_type=${this.state.searchText}&product_tags=${this.state.tagText}`
+      )
+      .then(res => this.setState({items: res.data}))
+      .catch(err => console.log(err));
+    }
+  });
+};
 
 
   render() {
+
     return (
-       <div className="search">
-      <OptionChange/>
-      {/* <select name="tagText" onChange={this.handleOptionChange}>
-       <option value="Not Selected">Not Selected</option>
-      <option value="canadian">Canadian</option>
-      <option value="natural">Natural</option>
-      <option value="vegan">Vegan</option>
-      <option value="audi">Audi</option>
-</select> */}
+    <div className="search">
+      
+    <select name="tagText" onChange={this.handleOptionChange}>
+    <option value="Not Selected">Not Selected</option>
+    <option value="canadian">Canadian</option>
+    <option value="certclean">Cert Clean</option>
+    <option value="chemical free">Chemical Free</option>
+    <option value="dairy free">Dairy Free</option>
+    <option value="ewg verified">EWG Verified</option>
+    <option value="ecocert">Eco Cert</option>
+    <option value="fair trade">Fair Trade</option>
+    <option value="gluten free">Gluten Free</option>
+    <option value="hypoallergenic">Hypoallergenic</option>
+    <option value="natural">Natural</option>
+    <option value="No Talc">No Talc</option>
+    <option value="organic">Organic</option>
+    <option value="peanut free product">Peanut Free Product</option>
+    <option value="sugar free">Sugar Free</option>
+    <option value="usda organic">USDA Organic</option>
+    <option value="vegan">Vegan</option>
+    <option value="alcohol free">Alcohol Free</option>
+    <option value="cruelty free">Cruelty Free</option>
+    <option value="oil free">Oil Free</option>
+    <option value="purpicks">Purpicks</option>
+    <option value="silicone free">Silicon Free</option>
+    <option value="water free">Water Free</option>
+    
+
+    </select>  
 
 <input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.handleInputChange}/>
-        <div className="layout">
-        {this.state.items.map(item => (
-        <div key={item.id} className="item">
-
-        <ReactImageFallback
-					src={item.image_link}
-					fallbackImage={noimg}
-					initialImage="loader.gif"
-					alt="Image should be here"
-					className="image-link" />
-      
-         <div className="item-list">
-         <div className="item-name list">{item.name}</div>
-         <div className="brand-name list">by {item.brand}</div>
-
-         <ul>
-         {item.tag_list.map(tag => (
-           <li key={tag} className="tag-name list">{tag}</li>
-         ))}
-         </ul>
-         
-         </div>
-
-         <div className="shop-btn">
-         <a href={item.product_link} className="link-btn list" target="_blank">SHOP</a>
-         </div>
-
-          </div>
-        ))}
-         
-
-        </div>
+         <ImageResult items={this.state.items} />
         </div>
     );
   }
