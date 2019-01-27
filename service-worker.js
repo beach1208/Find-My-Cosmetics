@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/beach1208/Find-My-Cosmetics/precache-manifest.465d44f99e41e309308f600363071588.js"
+  "/Find-My-Cosmetics/precache-manifest.5edb2b57232336afe4c7cf92ebb7d3a7.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/beach1208/Find-My-Cosmetics/index.html", {
+workbox.routing.registerNavigationRoute("/Find-My-Cosmetics/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
