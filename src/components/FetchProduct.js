@@ -9,7 +9,7 @@ state = {
   tagText:"",
   searchText: "",
   loading: true,
-  apiUrl: "http://makeup-api.herokuapp.com/api/v1/products.json",
+  apiUrl: "https://makeup-api.herokuapp.com/api/v1/products.json",
   items: []
 };
 
