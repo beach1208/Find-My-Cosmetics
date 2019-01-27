@@ -51,8 +51,11 @@ handleOptionChange= e =>{
 
     return (
     <div className="search">
-      
-    <select name="tagText" onChange={this.handleOptionChange}>
+
+    <input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.handleInputChange}/>
+       
+    <div className="category">By Category</div>
+    <select className="select-bar" name="tagText" onChange={this.handleOptionChange}>
     <option value="Not Selected">Not Selected</option>
     <option value="canadian">Canadian</option>
     <option value="certclean">Cert Clean</option>
@@ -80,9 +83,8 @@ handleOptionChange= e =>{
 
     </select>  
 
-<input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.handleInputChange}/>
-         <ImageResult items={this.state.items} />
-        </div>
+        <ImageResult items={this.state.items} />
+ </div>
     );
   }
 }

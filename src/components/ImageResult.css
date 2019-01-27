@@ -6,13 +6,13 @@
   background: #fff;
   overflow: hidden;
 }
-
+/* 
 .item-list {
  display: flex;
  justify-content: space-evenly;
  flex-direction: column;
  padding: 20px;
-}
+} */
 
 .image-link {
   max-width: 100%;
@@ -36,7 +36,7 @@ ul {
 }
 .tag-name {
   display: inline-block;
-  border: 1px solid #e06b6b;
+  border: 1px solid #cc7781;
   padding: 10px;
   color: #cc7781;
   border-radius: 5px;
@@ -52,10 +52,10 @@ ul {
   width: 100px;
   padding: 10px;
   margin: 0 auto;
-  border: 1px solid #d2d2d2;
+  border: 1px solid #cc7781;
   border-radius: 5px;
   display: block;
   color: #fff;
   text-decoration: none;
-  background: #dc91a0;
+  background: #cc7781;
 }
