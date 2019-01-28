@@ -2,7 +2,7 @@
 
 Web API Search App with React.
 
-https://beach1208.github.io/Find-My-Cosmetics/
+<a href="https://beach1208.github.io/Find-My-Cosmetics/" target="_blank">Find My Cosmetics</a>
 
 ## Major skills for development
 
@@ -34,3 +34,7 @@ By preparing category options, user also can search date with many other options
 * User can like each product and save to database.
 * User can post their favorite item to the website.
 
+
+## DEMO
+
+<img src=./makeup.gif>

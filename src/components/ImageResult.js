@@ -59,3 +59,5 @@ ImageResult.propTypes = {
  items: PropTypes.array.isRequired
 };
 export default ImageResult;
+
+
