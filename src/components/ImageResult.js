@@ -34,7 +34,6 @@ class ImageResult extends Component {
          <li className="link-btn"><a href={item.product_link} rel="noopener noreferrer" target="_blank">SHOP</a></li>
     
           </ul>
-
           </div>
         ))}
         </div>
