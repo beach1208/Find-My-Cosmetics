@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2dce49233123aa7a3e5d",
+    "revision": "8b74b62e7ee35addeafc",
     "url": "/Find-My-Cosmetics/static/css/main.7ff6bbd1.chunk.css"
   },
   {
-    "revision": "2dce49233123aa7a3e5d",
-    "url": "/Find-My-Cosmetics/static/js/main.2dce4923.chunk.js"
+    "revision": "8b74b62e7ee35addeafc",
+    "url": "/Find-My-Cosmetics/static/js/main.8b74b62e.chunk.js"
   },
   {
     "revision": "cbb65d73829b0c0a105c",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/Find-My-Cosmetics/static/media/noimg.67edcff8.svg"
   },
   {
-    "revision": "97a5ba2ebeaf9adc0ee214426f90c1ac",
+    "revision": "7b0a46c9bc0e9e481b7e6ab13153031d",
     "url": "/Find-My-Cosmetics/index.html"
   }
 ];
