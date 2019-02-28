@@ -14,7 +14,7 @@ export default class WordRecommend extends Component {
             <li>Blonzer</li>
             <li>EyeBrow</li>
             <li>Eyeliner</li>
-            <li>Marcara</li>
+            <li>Mascara</li>
             <li>Nail Polish</li>
         </ul>
         
