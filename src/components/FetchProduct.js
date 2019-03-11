@@ -3,6 +3,9 @@ import './FetchProduct.css';
 import axios from "axios";
 import ImageResult from "./ImageResult";
 import WordRecommend from "./WordRecommend";
+import _ from 'lodash'
+import OptionSelect from './OptionSelect';
+
 
 class FetchProduct extends Component {
 
@@ -14,8 +17,17 @@ state = {
   items: []
 };
 
+renderOptions() {
+  return _.map(OptionSelect,({label,value})=> {
+    return(
+      <option label={label} value={value}/>
+    )
+  })
+}
 
-handleInputChange= e =>{
+
+
+handleTermChange= e =>{
   const val = e.target.value;
   this.setState({[e.target.name]: val },() => {
     if(val === ""){
@@ -48,46 +60,19 @@ handleOptionChange= e =>{
 };
 
 
+
   render() {
 
     return (
     <div className="search">
-
-    <input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.handleInputChange}/>
-
-    <WordRecommend/>
-
-   
-    <select className="select-bar" name="tagText" onChange={this.handleOptionChange}>
-    <option value="Not Selected">Not Selected</option>
-    <option value="canadian">Canadian</option>
-    <option value="certclean">Cert Clean</option>
-    <option value="chemical free">Chemical Free</option>
-    <option value="dairy free">Dairy Free</option>
-    <option value="ewg verified">EWG Verified</option>
-    <option value="ecocert">Eco Cert</option>
-    <option value="fair trade">Fair Trade</option>
-    <option value="gluten free">Gluten Free</option>
-    <option value="hypoallergenic">Hypoallergenic</option>
-    <option value="natural">Natural</option>
-    <option value="No Talc">No Talc</option>
-    <option value="organic">Organic</option>
-    <option value="peanut free product">Peanut Free Product</option>
-    <option value="sugar free">Sugar Free</option>
-    <option value="usda organic">USDA Organic</option>
-    <option value="vegan">Vegan</option>
-    <option value="alcohol free">Alcohol Free</option>
-    <option value="cruelty free">Cruelty Free</option>
-    <option value="oil free">Oil Free</option>
-    <option value="purpicks">Purpicks</option>
-    <option value="silicone free">Silicon Free</option>
-    <option value="water free">Water Free</option>
-  
-    </select>  
+      <input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.handleTermChange}/>
+        <WordRecommend/>
+        <select className="select-bar" name="tagText" onChange={this.handleOptionChange}>
+           {this.renderOptions()}
+        </select>  
      <div className="category">By Category</div>
-
-        <ImageResult items={this.state.items} />
- </div>
+     <ImageResult items={this.state.items} />
+    </div>
     );
   }
 }

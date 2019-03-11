@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react';
 import "./WordRecommend.css"
 
-export default class WordRecommend extends Component {
-  render() {
-    return (
+const WordRecommend = () => {
+    return(
       <div>
         <div className="keyword">By Keyword</div>
         <ul className="keyword-list">
@@ -17,8 +16,10 @@ export default class WordRecommend extends Component {
             <li>Mascara</li>
             <li>Nail Polish</li>
         </ul>
-        
       </div>
-    )
-  }
+    );
+  
 }
+
+export default WordRecommend;
+
