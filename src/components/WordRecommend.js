@@ -10,7 +10,7 @@ const WordRecommend = () => {
             <li>Foundation</li>
             <li>Blush</li>
             <li>EyeShadow</li>
-            <li>Blonzer</li>
+            <li>Bronzer</li>
             <li>EyeBrow</li>
             <li>Eyeliner</li>
             <li>Mascara</li>

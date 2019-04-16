@@ -20,11 +20,10 @@ state = {
 renderOptions() {
   return _.map(OptionSelect,({label,value})=> {
     return(
-      <option label={label} value={value}/>
+      <option key={label} label={label} value={value}/>
     )
   })
 }
-
 
 
 handleTermChange= e =>{
@@ -43,31 +42,13 @@ handleTermChange= e =>{
   });
 };
 
-handleOptionChange= e =>{
-  const val = e.target.value;
-  this.setState({[e.target.name]: val },() => {
-    if(val === ""){
-      this.setState({items: []});
-    } else {
-      axios
-      .get(
-        `${this.state.apiUrl}?product_type=${this.state.searchText}&product_tags=${this.state.tagText}`
-      )
-      .then(res => this.setState({items: res.data}))
-      .catch(err => console.log(err));
-    }
-  });
-};
-
-
-
   render() {
 
     return (
     <div className="search">
       <input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.handleTermChange}/>
         <WordRecommend/>
-        <select className="select-bar" name="tagText" onChange={this.handleOptionChange}>
+        <select className="select-bar" name="tagText" onChange={this.handleTermChange}>
            {this.renderOptions()}
         </select>  
      <div className="category">By Category</div>
