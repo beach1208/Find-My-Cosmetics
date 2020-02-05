@@ -6,10 +6,8 @@ import './ImageResult.css'
 
 
 class ImageResult extends Component {
-    
     render() {
     let imageListContent;
-
     const { items } = this.props;
     if (items) {
       imageListContent = (
@@ -24,8 +22,6 @@ class ImageResult extends Component {
               className="image-link" />
             <li className="item-name">{item.name}</li>
             <li className="brand-name">by {item.brand}</li>
-
-        {/* tag_list is a list array and map trough each element here */}
             {item.tag_list.map(tag => (
               <li key={tag} className="tag-name">{tag}</li>
               ))}
@@ -36,12 +32,10 @@ class ImageResult extends Component {
         </div>
         ))}
         </div>
-        
       );
       } else {
       imageListContent = null;
     }
-
 
     return (
       <div>
@@ -51,7 +45,6 @@ class ImageResult extends Component {
     
 }}
 
-// date check if components has array data
 ImageResult.propTypes = {
  items: PropTypes.array.isRequired
 };

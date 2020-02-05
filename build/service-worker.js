@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Find-My-Cosmetics/precache-manifest.d8c915b88a3d7a1d622c568c1b227738.js"
+  "/Find-My-Cosmetics/precache-manifest.32eeaf06816ec02408d23fc2191b2621.js"
 );
 
 workbox.clientsClaim();

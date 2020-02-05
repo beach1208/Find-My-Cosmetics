@@ -27,6 +27,7 @@ renderOptions() {
 
 
 handleTermChange= e =>{
+  e.preventDefault()
   const val = e.target.value;
   this.setState({[e.target.name]: val },() => {
     if(val === ""){
@@ -42,18 +43,18 @@ handleTermChange= e =>{
   });
 };
 
-  render() {
 
+  render() {
     return (
-    <div className="search">
-      <input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.handleTermChange}/>
-        <WordRecommend/>
-        <select className="select-bar" name="tagText" onChange={this.handleTermChange}>
-           {this.renderOptions()}
-        </select>  
-     <div className="category">By Category</div>
-     <ImageResult items={this.state.items} />
-    </div>
+      <div className="search">
+        <input name="searchText" className="search-bar" type="text" placeholder="Search" onChange={this.handleTermChange}/>
+          <WordRecommend/>
+          <select className="select-bar" name="tagText" onChange={this.handleOptionSearch}>
+            {this.renderOptions()}
+          </select>  
+      <div className="category">By Category</div>
+      <ImageResult items={this.state.items} />
+      </div>
     );
   }
 }
